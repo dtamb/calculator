@@ -1,0 +1,42 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.calculator{
+    padding: 5px;
+
+}
+
+.screen{
+    width: 160px;
+    border: 4px black solid;
+    margin-bottom: 5px;
+    padding: 5px;
+    text-align: end;
+}
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+    gap: 5px;
+}
+
+.buttonRow{
+    display:flex;
+    gap: 5px;
+}
+
+.button{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+}
+
+.button.zero{
+    width: 85px;
+}
