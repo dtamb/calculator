@@ -11,7 +11,10 @@ function multiply(num1,num2){
 }
 
 function divide(num1,num2){
-    return num1/num2;
+    if(!num2){
+        return('Please stop that.')
+    }
+    else return num1/num2;
 }
 
 function operate(input1,input2,operator){
@@ -42,7 +45,6 @@ function buttonClick(eventObj){
             updateScreen([0],screen);
         }
         else if (!input2){
-            console.log(typeof(input1));
             input2 = displayValue.join('');
             displayValue.splice(0);
             input1 = operate(+input1,+input2,operator);
@@ -58,6 +60,13 @@ function buttonClick(eventObj){
         input1 = 0;
         input2 = 0;
         operator ='';
+    }
+    else if (input.classList.contains("clear")){
+        input1 = 0;
+        input2 = 0;
+        operator = '';
+        displayValue.splice(0);
+        updateScreen([0],screen);
     }
 }
 
