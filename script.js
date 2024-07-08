@@ -57,7 +57,6 @@ function buttonClick(eventObj){
         if(!(input1&&operator)){
             return;
         }
-        console.log("Hiya");
         input2 = displayValue.join('');
         displayValue.splice(0);
         updateScreen([operate(+input1,+input2,operator)],screen);
