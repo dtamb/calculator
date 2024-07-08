@@ -29,9 +29,12 @@ function buttonClick(eventObj){
         displayValue.push(+input.textContent);
         updateScreen(displayValue,screen);
     }
-    // else if(input.classList.contains("point")){
-    //     if()
-    // }
+    else if(input.classList.contains("point")){
+        if(!displayValue.some((element)=> element === '.')){
+            displayValue.push(input.textContent);
+            updateScreen(displayValue,screen);
+        }
+    }
     else if (input.classList.contains("operator")){
         if(!input1){
             input1 = displayValue.join('');
@@ -54,8 +57,8 @@ function buttonClick(eventObj){
         updateScreen([operate(+input1,+input2,operator)],screen);
         input1 = 0;
         input2 = 0;
+        operator ='';
     }
-    
 }
 
 function updateScreen(displayValue, screen){
